@@ -3,7 +3,7 @@ Hjarnknull [Misc 337, 7 solves]
 
 Hjarnknull is a challenge where you're given a Python script that's an emulator for a custom instruction set architecture. You are tasked to implement addition, subtraction, and multiplication in a very limited assembly language that only has a few bitwise operations built-in.
 
-How hard could it possibly be? I can't imagine there's any way that I would spend 12 hours straight working on this challenge (narrator: he did). I had MANY failed attempts at solving this challenge before finally coming up with a working solution. All of my scripts are included in this directory, including my failed attempts and various tests.
+How hard could it possibly be? I can't imagine there's any way that I would spend 12 hours straight working on this challenge (narrator: he did). I had MANY failed attempts at solving this challenge before finally coming up with a working solution. All of my scripts are included in this directory, including my failed attempts and various tests. I played this CTF as part of Pwninsula, and we ended up coming in 9th place overall.
 
 
 ### Instruction Set
