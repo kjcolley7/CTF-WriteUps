@@ -1,0 +1,266 @@
+hsh -1 1
+inte -1
+hsh 0 1
+vsh 2 1
+eller 3 2
+vsh 4 2
+eller 5 4
+vsh 6 1
+eller 6 4
+eller 7 3
+eller 7 4
+vsh 8 2
+vsh 8 1
+eller 9 8
+vsh 10 1
+eller 10 8
+vsh 16 4
+vsh 32 4
+vsh 32 1
+vsh 64 4
+vsh 64 2
+eller 15 7
+eller 15 8
+eller 31 15
+eller 31 16
+eller 63 31
+eller 63 32
+eller 65 64
+vsh 165 65
+testa 0 0 31
+poppa
+in 211
+in 212
+in 213
+testa 211 0 40
+testa 211 1 51
+testa 211 2 76
+ut 214
+testa 0 0 31
+poppa
+eller 205 -1
+inte 205
+eller 205 212
+eller 206 -1
+inte 206
+eller 206 213
+testa 0 0 106
+eller 214 -1
+inte 214
+eller 214 207
+poppa
+eller 224 -1
+inte 224
+eller 224 213
+inte 224
+eller 205 -1
+inte 205
+eller 205 224
+eller 206 -1
+inte 206
+eller 206 1
+testa 0 0 106
+eller 223 -1
+inte 223
+eller 223 207
+eller 205 -1
+inte 205
+eller 205 212
+eller 206 -1
+inte 206
+eller 206 223
+testa 0 0 106
+eller 214 -1
+inte 214
+eller 214 207
+poppa
+eller 208 -1
+inte 208
+eller 208 212
+eller 209 -1
+inte 209
+eller 209 213
+testa 0 0 175
+eller 214 -1
+inte 214
+eller 214 210
+poppa
+eller 203 -1
+inte 203
+eller 204 -1
+inte 204
+eller 222 -1
+inte 222
+eller 222 200
+eller 222 1
+testa 222 200 103
+eller 222 -1
+inte 222
+eller 222 201
+eller 222 1
+testa 222 201 103
+testa 202 -1 103
+poppa
+eller 204 203
+inte 203
+poppa
+eller 207 -1
+inte 207
+eller 215 -1
+inte 215
+eller 215 1
+eller 216 -1
+inte 216
+eller 218 -1
+inte 218
+eller 219 -1
+inte 219
+testa 0 0 131
+eller 220 -1
+inte 220
+eller 220 218
+inte 220
+inte 220
+eller 221 -1
+inte 221
+eller 221 216
+inte 221
+eller 220 221
+inte 220
+eller 207 220
+poppa
+eller 217 -1
+inte 217
+eller 217 216
+eller 200 -1
+inte 200
+eller 200 205
+eller 201 -1
+inte 201
+eller 201 206
+eller 202 -1
+inte 202
+eller 202 217
+testa 0 0 87
+eller 220 -1
+inte 220
+eller 220 203
+eller 216 -1
+inte 216
+eller 216 204
+testa 220 -1 160
+vsh 215 1
+vsh 218 1
+eller 218 1
+hsh 205 1
+hsh 206 1
+testa 205 0 162
+testa 205 -1 172
+testa 219 0 131
+poppa
+eller 207 215
+poppa
+testa 206 0 165
+testa 206 -1 167
+poppa
+testa 216 0 170
+poppa
+inte 216
+eller 219 -1
+poppa
+eller 219 -1
+poppa
+testa 206 0 167
+testa 206 -1 170
+poppa
+eller 210 -1
+inte 210
+eller 225 -1
+inte 225
+eller 226 -1
+inte 226
+eller 227 -1
+inte 227
+eller 227 208
+hsh 227 64
+testa 227 -1 195
+eller 227 -1
+inte 227
+eller 227 209
+hsh 227 64
+testa 227 -1 211
+testa 209 0 242
+testa 226 0 244
+testa 225 -1 227
+poppa
+eller 228 -1
+inte 228
+eller 228 208
+inte 228
+eller 205 -1
+inte 205
+eller 205 228
+eller 206 -1
+inte 206
+eller 206 1
+testa 0 0 106
+eller 208 -1
+inte 208
+eller 208 207
+inte 225
+poppa
+eller 229 -1
+inte 229
+eller 229 209
+inte 229
+eller 205 -1
+inte 205
+eller 205 229
+eller 206 -1
+inte 206
+eller 206 1
+testa 0 0 106
+eller 209 -1
+inte 209
+eller 209 207
+inte 225
+poppa
+eller 230 -1
+inte 230
+eller 230 210
+inte 230
+eller 205 -1
+inte 205
+eller 205 230
+eller 206 -1
+inte 206
+eller 206 1
+testa 0 0 106
+eller 210 -1
+inte 210
+eller 210 207
+poppa
+eller 226 -1
+poppa
+eller 227 -1
+inte 227
+eller 227 209
+eller 227 1
+testa 227 209 254
+vsh 208 1
+hsh 209 1
+testa 209 0 242
+testa 226 0 244
+poppa
+eller 205 -1
+inte 205
+eller 205 210
+eller 206 -1
+inte 206
+eller 206 208
+testa 0 0 106
+eller 210 -1
+inte 210
+eller 210 207
+poppa
+slut
