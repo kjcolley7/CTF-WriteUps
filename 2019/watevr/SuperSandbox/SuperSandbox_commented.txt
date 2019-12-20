@@ -1,0 +1,59 @@
+# Characters accessible:
+# acdefilnorstuvxy()[]{}=,< >
+
+# Get f=false, t=true, u=undefined
+tc..fct.uadf
+
+# Get numbers
+1bft2b113b124b225b236b337b348b449b45
+
+# Get string e="(x, y) => x[y]"
+ebda
+
+# Get character X="x"
+Xae1
+
+#                       0123456789
+# Change string e to e="x(x, y) => x[y]"
+ebXe
+
+#        012345      01234      0123456789
+# Get g="xfalse", h="xtrue", i="xundefined"
+gbXfhbXtibXu
+
+# Get letters "a", "l", "e", "r", "t"
+Aag2Lag3Eag5Rah2Tah1
+
+# Get j="alert"
+jbALjbjEjbjRjbjT
+
+# Get k="alert(1)"
+_ae1kbj_kbk1_ae6kbk_
+
+# Get letters "f", "i", "d"
+Fai5Iai6Dai3
+
+# Get l="fixed"
+lbFIlblXlblElblD
+
+# Get m=string.prototype.fixed
+maXl
+
+#        0123456789
+# Get n="xfunction fixed() { [native code] }"
+nbXm
+
+# Get letters "c", "o", "n", "s", "u"
+Can4Oan7Nan3Sag4Uan2
+
+# Get o="constructor"
+obCOoboNoboSoboToboRoboUoboCoboToboOoboR
+
+# Get p=function["constructor"]
+paao
+
+# Get q=function() { alert(1); }
+qp.k
+
+# Call q() to invoke alert(1)
+_q..
