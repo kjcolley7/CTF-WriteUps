@@ -1,4 +1,4 @@
-Hjarnknull [Misc 337, 7 solves]
+Hjarnknull [Misc, 337 points, 7 solves]
 ==========
 
 Hjarnknull is a challenge where you're given a Python script that's an emulator for a custom instruction set architecture. You are tasked to implement addition, subtraction, and multiplication in a very limited assembly language that only has a few bitwise operations built-in.
@@ -13,7 +13,7 @@ After reading through the script, here are the available instructions and my tra
 
 | Hjarnknull Instruction | My translation              | Operation            |
 |------------------------|-----------------------------|----------------------|
-| `eller`                | `orr` (bitwise or)          | `a |= b`             |
+| `eller`                | `orr` (bitwise or)          | `a \|= b`             |
 | `inte`                 | `inv` (bitwise inverse)     | `a = ~a`             |
 | `testa`                | `jeq` (jump if equal)       | `if a == b: call c ` |
 | `poppa`                | `ret` (return)              | `pop ip and jmp`     |
