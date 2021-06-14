@@ -80,7 +80,7 @@ Instruction Name (chosen by me) | Class   | Opcode (if XYZ class) | Description
 `add[s]`                        | XYZ     | 0x00/0x10(s)          | Addition: `Rz = Rx + Vy`
 `sub[s]`                        | XYZ     | 0x04/0x14(s)          | Subtraction: `Rz = Rx - Vy`
 `and[s]`                        | XYZ     | 0x01/0x11(s)          | Bitwise AND: `Rz = Rx & Vy`
-`orr[s]`                        | XYZ     | 0x02/0x12(s)          | Bitwise OR: `Rz = Rx | Vy`
+`orr[s]`                        | XYZ     | 0x02/0x12(s)          | Bitwise OR: `Rz = Rx \| Vy`
 `xor[s]`                        | XYZ     | 0x03/0x13(s)          | Bitwise XOR: `Rz = Rx ^ Vy`
 `shr`                           | XYZ     | 0x0D                  | Bitwise right shift: `Rz = Rx >> Vy`
 `shl`                           | XYZ     | 0x0E                  | Bitwise left shift: `Rz = Rx << Vy`
@@ -109,9 +109,9 @@ Name  | Value | Operation         | Description
 ------|------:|-------------------|-------------
 `nv`  | `0x0` | `false`           | NEVER
 `eq`  | `0x1` | `ZF`              | EQUAL_or_ZERO
-`le`  | `0x2` | `ZF || SF != CF`  | SIGNED_LESS_OR_EQUAL
+`le`  | `0x2` | `ZF \|\| SF != CF`  | SIGNED_LESS_OR_EQUAL
 `lt`  | `0x3` | `SF != CF`        | LESS
-`le2` | `0x4` | `ZF || SF != CF`  | SIGNED_LESS_OR_EQUAL_again
+`le2` | `0x4` | `ZF \|\| SF != CF`  | SIGNED_LESS_OR_EQUAL_again
 `vs`  | `0x5` | `VF`              | OVERFLOW
 `ng`  | `0x6` | `SF`              | NEGATIVE
 `cs`  | `0x7` | `CF`              | CARRY_SET
