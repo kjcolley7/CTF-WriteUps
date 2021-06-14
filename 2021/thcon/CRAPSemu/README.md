@@ -91,8 +91,12 @@ Instruction Name (chosen by me) | Class   | Opcode (if XYZ class) | Description
 `x25`                           | XYZ     | 0x21                  | (Used internally) Sign extend from 25-bit value. `Rz = sign_extend_25(Rx)`
 `sl8`                           | XYZ     | 0x23                  | (Used internally) Shift left by 8 bits. `Rz = Rx << 8`
 `nop`                           | XYZ     | 0x28                  | No operation is performed.
+`ldr`                           | XYZ(\*) | 0x00                  | Load DWORD: `Rz = MEM[Rx + Vy]`
+`str`                           | XYZ(\*) | 0x04                  | Store DWORD: `MEM[Rx + Vy] = Rz`
 
-Some of these instructions require more details. For the `syscall` instruction, here is pseudocode for how it works:
+Some of these instructions require more details. The `ldr` and `str` instructions use the same encoding as the `add` and `sub` instructions, respectively, except they have an additional bit set.
+
+As for the `syscall` instruction, here is pseudocode for how it works:
 
 ```c
 switch(r1) {
