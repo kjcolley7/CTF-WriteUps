@@ -1,0 +1,190 @@
+00: push 0x80
+01: push 0x7f
+
+// a = 0x7f
+02: stm
+
+/*
+ * Fills memory like:
+ * addr = 0x80
+ * do {
+ *     *addr = addr;
+ *     --addr;
+ * } while(addr != 0)
+ *
+ * Therefore, each memory location <= 0x80 will have its value set to
+ * its address.
+ */
+memfill_loop:
+03: push 0x80
+04: ldm
+05: push 0x80
+06: ldm
+
+// mem[mem[0x80]] = mem[0x80]
+07: stm
+08: push 0x00
+09: push 0x80
+0A: ldm
+
+// cmp mem[0x80], 0x00
+0B: sub
+0C: jzr 0x15 (after_loop)
+
+0D: push 0x80
+0E: push 0x01
+0F: push 0x80
+10: ldm
+11: sub
+
+// mem[0x80] -= 1
+12: stm
+13: pop // pops result of comparison
+14: jmp 0x03 (memfill_loop)
+
+after_loop:
+15: push 0x80
+16: push 0x00
+17: stm // *0x80 = 0
+18: push 0x81
+19: push 0x00
+1A: stm // *0x81 = 0
+
+label_d:
+1B: push 0x81  ; (&b)
+1C: push 0x81  ; (&b, &b)
+1D: ldm        ; (&b, b)
+1E: push 0x80  ; (&b, b, &a)
+1F: ldm        ; (&b, b, a)
+20: ldm        ; (&b, b, a_val)
+21: add        ; (&b, a_val + b)
+22: push 0x80  ; (&b, a_val + b, &b)
+23: ldm        ; (&b, a_val + b, b)
+24: push 0x07  ; (&b, a_val + b, b, 7)
+25: and        ; (&b, a_val + b, b & 7)
+26: push 0xf8  ; (&b, a_val + b, b & 7, 0xf8)
+27: add        ; (&b, a_val + b, (b & 7) + 0xf8)
+28: ldm        ; (&b, a_val + b, mem[(b & 7) + 0xf8])
+29: add        ; ()
+2A: push 0x7f  ; ()
+2B: and        ; ()
+2C: stm        ; ()
+2D: call 0x7d (swap(int* a, int* b))
+2E: push 0x80
+2F: push 0x80
+30: ldm
+31: push 0x01
+32: add
+33: stm
+34: push 0x80
+35: ldm
+36: push 0x80
+37: xor
+38: jzr 0x3b (label_c)
+
+39: pop
+3A: jmp 0x1b (label_d)
+
+label_c:
+3B: push 0x80
+3C: push 0x00
+3D: stm
+3E: push 0x81
+3F: push 0x00
+40: stm
+
+label_g:
+41: push 0x80
+42: push 0x80
+43: ldm
+44: push 0x01
+45: add
+46: stm
+47: push 0x81
+48: push 0x81
+49: ldm
+4A: push 0x80
+4B: ldm
+4C: ldm
+4D: add
+4E: push 0x7f
+4F: and
+50: stm
+51: call 0x7d (swap(int* a, int* b))
+52: push 0x80
+53: ldm
+54: ldm
+55: push 0x81
+56: ldm
+57: ldm
+58: add
+59: push 0x7f
+5A: and
+5B: ldm
+5C: push 0x01
+5D: push 0x8c (flag_start)
+5E: push 0x80
+5F: ldm
+60: add
+61: sub
+
+// flag_start[a-1]
+62: ldm
+63: xor
+64: push 0x01
+65: push 0xbc
+66: push 0x80
+67: ldm
+68: add
+69: sub
+6A: ldm
+6B: xor
+6C: pop
+6D: jzr 0x72 (label_e)
+
+exit_fail:
+6E: push 0x87
+6F: push 0x01
+70: stm
+71: halt
+
+label_e:
+72: push 0x80
+73: ldm
+74: push 0x30
+75: xor
+76: jzr 0x79 (exit_win)
+
+77: pop
+78: jmp 0x41 (label_g)
+
+exit_win:
+79: push 0x87
+7A: push 0x02
+7B: stm
+7C: halt
+
+/*
+ * This function expects addresses 0x80 and 0x81 to hold pointers. The values
+ * pointed to by those two addresses will be swapped by this function.
+ */
+swap(int* a, int* b):
+// a = mem[0x80]
+// b = mem[0x81]
+7D: push 0x81      ; (&b)
+7E: ldm (var_81)   ; (b)
+7F: push 0x80      ; (b, &a)
+80: ldm (var_80)   ; (b, a)
+81: ldm (*var_80)  ; (b, a_val)
+82: push 0x80      ; (b, a_val, &a)
+83: ldm (var_80)   ; (b, a_val, a)
+84: push 0x81      ; (b, a_val, a, &b)
+85: ldm (var_81)   ; (b, a_val, a, b)
+86: ldm (*var_81)  ; (b, a_val, a, b_val)
+
+// *a = b_val
+87: stm            ; (b, a_val)
+
+// *b = a_val
+88: stm            ; ()
+89: ret            ; ()

@@ -1,0 +1,40 @@
+Stack Ops:
+
+(all return sp[0], sp[-1])
+
+3'd0: pushUp (*++sp = value)
+3'd1: set (*sp = value)
+3'd2: pop2 (sp -= 2)
+3'd3: pushDown (*--sp = value)
+3'd4: pop1 (sp--)
+
+
+ALU Ops:
+
+3'd0: add
+3'd1: sub
+3'd2: xor
+3'd3: and
+3'd4: or
+3'd5: shl
+3'd6: shr
+
+
+opcodes:
+
+4'b0000: add   // a = DSP.pop(); b = DSP.pop(); DSP.push(a + b)
+4'b0001: sub   // a = DSP.pop(); b = DSP.pop(); DSP.push(a - b)
+4'b0010: xor   // a = DSP.pop(); b = DSP.pop(); DSP.push(a ^ b)
+4'b0011: and   // a = DSP.pop(); b = DSP.pop(); DSP.push(a & b)
+4'b0100: or    // a = DSP.pop(); b = DSP.pop(); DSP.push(a | b)
+4'b0101: shl   // a = DSP.pop(); b = DSP.pop(); DSP.push(a << b)
+4'b0110: shr   // a = DSP.pop(); b = DSP.pop(); DSP.push(a >> b)
+4'b0111: pop   // SP--
+4'b1000: jmp   // PC = imm8
+4'b1001: call  // CSP.push(PC + 1); PC = imm8
+4'b1010: ret   // PC = CSP.pop()
+4'b1011: jzr   // if (ZF) { PC = imm8; }
+4'b1100: push  // *DSP++ = imm8
+4'b1101: ldm   // a = DSP.pop(); DSP.push(data[a])
+4'b1110: stm   // a = DSP.pop(); b = DSP.pop(); data[b] = a
+4'b1111: halt  // while(1) {}
