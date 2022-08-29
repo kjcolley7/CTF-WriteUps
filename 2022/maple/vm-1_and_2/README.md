@@ -85,7 +85,7 @@ Instructions are 12 bits: the top 4 bits are the opcode, then the bottom 8 bits 
 |    `1` | `sub`       | `a = dSP.pop(); b = dSP.pop(); dSP.push(a - b)`  |
 |    `2` | `xor`       | `a = dSP.pop(); b = dSP.pop(); dSP.push(a ^ b)`  |
 |    `3` | `and`       | `a = dSP.pop(); b = dSP.pop(); dSP.push(a & b)`  |
-|    `4` | `or`        | `a = dSP.pop(); b = dSP.pop(); dSP.push(a | b)`  |
+|    `4` | `or`        | `a = dSP.pop(); b = dSP.pop(); dSP.push(a \| b)` |
 |    `5` | `shl`       | `a = dSP.pop(); b = dSP.pop(); dSP.push(a << b)` |
 |    `6` | `shr`       | `a = dSP.pop(); b = dSP.pop(); dSP.push(a >> b)` |
 |    `7` | `pop`       | `dSP--`                                          |
