@@ -22,7 +22,7 @@ From the challenge's [README](cpu_README.md) file:
 >.circ files open in Logisim Evolution: https://github.com/logisim-evolution/logisim-evolution
 >
 >The checker will read the flag as a 64-bit hex string at a certain location in memory.
->Flag should be submitted as maple{XXXX_XXXX_XXXXX_XXX} where X is an uppercase hex digit.
+>Flag should be submitted as `maple{XXXX_XXXX_XXXXX_XXX}` where X is an uppercase hex digit.
 
 
 ## Overview
@@ -46,7 +46,7 @@ After exploring Logisim Evolution for a while, I learned a few useful things:
 
 ## Strategy for reverse engineering the CPU from its circuit diagrams
 
-I'm sure that this challenge could be solved purely by simulating the CPU a bunch and learning about the code execution as it goes, but I chose to reverse engineer the circuit and understand how the CPU actually works, what registers it has, how instructions are decoded and executed, how memory accesses and branches work, etc. Therefore, I started going through the components in Logisim Evolution and taking notes, in the form of a massive documentation comment and some Python code for an "emulator": [emu_old.py]. Note that this "emulator" is really more of a literal translation from the hardware into Python code without doing any real understanding of how it works. I never actually tried running that "emulator", and instead used that as an easier reference of what the hardware is doing to assist with writing a real emulator.
+I'm sure that this challenge could be solved purely by simulating the CPU a bunch and learning about the code execution as it goes, but I chose to reverse engineer the circuit and understand how the CPU actually works, what registers it has, how instructions are decoded and executed, how memory accesses and branches work, etc. Therefore, I started going through the components in Logisim Evolution and taking notes, in the form of a massive documentation comment and some Python code for an "emulator": [emu_old.py](emu_old.py). Note that this "emulator" is really more of a literal translation from the hardware into Python code without doing any real understanding of how it works. I never actually tried running that "emulator", and instead used that as an easier reference of what the hardware is doing to assist with writing a real emulator.
 
 A lot of the reverse engineering effort came down to counting the inputs to various multiplexers to understand how the opcode value changed the way an instruction executes. There are many multiplexers in the circuit, most of which use a 4-bit selector (so there are 16 inputs, one for each opcode, ALU operation, or condition code). Sometimes, it involved trying to understand what unclear names meant (like `IFn`, which probably was shortened from "instruction function", but a better name might be `aluop_or_cond`).
 
