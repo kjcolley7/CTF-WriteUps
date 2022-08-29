@@ -1,0 +1,117 @@
+# Various callstacks
+00: movi esp, 0xfffffc
+05: movi ebp, 0xeffffc
+0A: movi esi, 0xdffffc
+0F: movi edi, 0xcffffc
+
+# Load flag into ecx
+14: movi eax, 0xf1a9
+19: ldr flag_ecx, [eax + 0x0]
+1E: xor WIN_OUT_r14, WIN_OUT_r14
+
+# rto = flag ^ 0xb4a55f3e60a41ca1
+1F: movi edx, 0xb4a55f3e60a41ca1
+24: mov rto, flag_ecx
+25: xor rto, edx
+
+# rto = (flag ^ 0xb4a55f3e60a41ca1) - 0x450c0f3e60a41ca1
+26: movi ebx, 0x450c0f3e60a41ca1
+2B: sub rto, ebx
+
+# rto = ((flag ^ 0xb4a55f3e60a41ca1) - 0x450c0f3e60a41ca1) / 0x1000000000000 == 0
+# determines word 1: 0xf1a9
+2C: movi edx, 0x1000000000000
+31: div rto, edx
+32: jne exit
+
+37: call esi, func1_esi_edi
+
+func1_esi_edi:
+3C: call esi, func2_esi_noreturn
+
+# ((flag ^ 0x9f1242bae0347fc5) & 0xffff0000) - 0x5af40000 == 0
+# determines word 3: 0xbac0
+41: movi rto, 0x9f1242bae0347fc5
+46: mov edx, flag_ecx
+47: xor edx, rto
+48: movi ebx, 0xffff0000
+4D: and edx, ebx
+4E: movi ebx, 0x5af40000
+53: sub edx, ebx
+54: jne exit
+
+# hmmmm
+59: movi r11, secret1
+5E: push r11, [ebp]
+5F: ret edi
+
+exit:
+60: halt
+
+func7_edi_esi:
+61: call edi, func8_edi_esp
+66: movi r13, 0x100000000
+6B: mov r12, eax
+6C: mul r12, r13
+6D: add WIN_OUT_r14, r12
+6E: ret esi
+
+func3_esi_esi:
+6F: call esp, func4_esp_noreturn
+74: ret esi
+
+func8_edi_esp:
+75: movi r13, 0x1000000000000
+7A: mov r12, eax
+7B: mul r12, r13
+7C: add WIN_OUT_r14, r12
+7D: ret esp
+
+func5_edi_noreturn:
+7E: call edi, func6_edi_ebp
+83: add WIN_OUT_r14, eax
+84: halt
+
+func2_esi_noreturn:
+87: call esi, func3_esi_esi
+
+# ((flag ^ 0xf4138fdaef819a74) & 0xffff00000000) - 0x7ce700000000 == 0
+# determines word 2: 0xf33d
+8C: movi edx, 0xf4138fdaef819a74
+91: mov rto, flag_ecx
+92: xor edx, rto
+93: movi ebx, 0xffff00000000
+98: and edx, ebx
+99: movi rto, 0x7ce700000000
+9E: sub rto, edx
+9F: jne exit
+
+A4: movi r11, func1_esi_edi
+A9: push r11, [ebp]
+AA: ret edi
+
+func6_edi_ebp:
+AB: call edi, func7_edi_esi
+B0: movi r13, 0x10000
+B5: mov r12, eax
+B6: mul r12, r13
+B7: add r14, r12
+B8: ret ebp
+
+secret1:
+# ((flag ^ 0x462f29fcab2119ab) & 0xffff) - 0x5edc == 0
+# determines word 4: 0x4777
+B9: movi rto, 0x462f29fcab2119ab
+BE: mov edx, flag_ecx
+BF: xor edx, rto
+C0: movi ebx, 0xffff
+C5: and edx, ebx
+C6: movi ebx, 0x5edc
+CB: sub edx, ebx
+CC: jne exit
+
+D1: ret edi
+
+func4_esp_noreturn:
+D2: call edi, func5_edi_noreturn
+D7: halt

@@ -363,4 +363,4 @@ And there's the flag!
 
 During competition, I was the second solver for this challenge.
 
-After this challenge, I went on to solve "confounded pondering unit" (writeup coming soon), which is another similar custom CPU challenge.
+After this challenge, I went on to solve [confounded pondering unit](../cpu/README.md), which is another similar custom CPU challenge.
