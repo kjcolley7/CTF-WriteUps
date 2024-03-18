@@ -1,0 +1,513 @@
+Name PALWORLD ;
+Partno 00 ;
+Date Mar 2024;
+Revision 01;
+Designer HCADAM;
+Company WCTF;
+Assembly None;
+Location ;
+Device ;
+
+/* WE HAVE PALWORLD AT HOME. PALWORLD AT HOME: */
+
+PIN    = clk;
+PIN    = reset;
+PIN    = flag_in0;
+PIN    = flag_in1;
+PIN    = flag_in2;
+PIN    = flag_in3;
+PIN    = flag_in4;
+PIN    = flag_in5;
+PIN    = flag_in6;
+PIN    = flag_in7;
+PIN    = flag_ok;
+
+flag_ok = ( ( ( ( ( counter0_inv & ! ( counter1 ) ) & ( ( ! ( gen31_bit2 ) & ! ( gen31_bit4
+  ) ) & ( ! ( gen30_bit0 ) & ! ( gen30_bit1 ) ) ) ) & ( ( ( ( ! ( gen30_bit7 ) & ! (
+  gen29_bit1 ) ) & ( ! ( gen29_bit2 ) & ! ( gen29_bit4 ) ) ) & ( ( ! ( gen30_bit2
+  ) & ! ( gen30_bit3 ) ) & ( ! ( gen30_bit5 ) & ! ( gen30_bit6 ) ) ) ) & ( ( ( ! (
+  gen27_bit0 ) & ! ( gen27_bit2 ) ) & ( ! ( gen27_bit4 ) & ! ( gen27_bit5 ) ) ) &
+  ( ( ! ( gen28_bit0 ) & ! ( gen28_bit4 ) ) & ( ! ( gen28_bit5 ) & ! ( gen28_bit7
+  ) ) ) ) ) ) & ( ( ( ( ( ( ! ( gen22_bit4 ) & ! ( gen22_bit5 ) ) & ( ! (
+  gen22_bit7 ) & ! ( gen21_bit3 ) ) ) & ( ( ! ( gen23_bit2 ) & ! ( gen23_bit3 ) )
+  & ( ! ( gen23_bit4 ) & ! ( gen23_bit5 ) ) ) ) & ( ( ( ! ( gen20_bit0 ) & ! (
+  gen20_bit1 ) ) & ( ! ( gen20_bit2 ) & ! ( gen20_bit3 ) ) ) & ( ( ! ( gen21_bit4
+  ) & ! ( gen21_bit5 ) ) & ( ! ( gen21_bit6 ) & ! ( gen21_bit7 ) ) ) ) ) & ( ( ( (
+  ! ( gen25_bit1 ) & ! ( gen25_bit2 ) ) & ( ! ( gen25_bit3 ) & ! ( gen25_bit4 ) )
+  ) & ( ( ! ( gen26_bit3 ) & ! ( gen26_bit5 ) ) & ( ! ( gen26_bit7 ) & ! (
+  gen25_bit0 ) ) ) ) & ( ( ( ! ( gen24_bit3 ) & ! ( gen24_bit4 ) ) & ( ! (
+  gen24_bit7 ) & ! ( gen23_bit0 ) ) ) & ( ( ! ( gen25_bit5 ) & ! ( gen25_bit6 ) )
+  & ( ! ( gen25_bit7 ) & ! ( gen24_bit1 ) ) ) ) ) ) & ( ( ( ( ( ! ( gen14_bit7 )
+  & ! ( gen13_bit0 ) ) & ( ! ( gen13_bit1 ) & ! ( gen13_bit4 ) ) ) & ( ( ! (
+  gen15_bit1 ) & ! ( gen15_bit5 ) ) & ( ! ( gen15_bit7 ) & ! ( gen14_bit4 ) )
+  ) ) & ( ( ( ! ( gen12_bit4 ) & ! ( gen12_bit6 ) ) & ( ! ( gen12_bit7 ) & ! (
+  gen11_bit0 ) ) ) & ( ( ! ( gen13_bit6 ) & ! ( gen13_bit7 ) ) & ( ! (
+  gen12_bit1 ) & ! ( gen12_bit3 ) ) ) ) ) & ( ( ( ( ! ( gen19_bit3 ) & ! (
+  gen19_bit5 ) ) & ( ! ( gen19_bit6 ) & ! ( gen18_bit6 ) ) ) & ( ( ! (
+  gen20_bit4 ) & ! ( gen20_bit5 ) ) & ( ! ( gen20_bit7 ) & ! ( gen19_bit0 ) ) ) )
+  & ( ( ( ! ( gen16_bit4 ) & ! ( gen16_bit5 ) ) & ( ! ( gen16_bit6 ) & ! (
+  gen15_bit0 ) ) ) & ( ( ! ( gen17_bit0 ) & ! ( gen16_bit0 ) ) & ( ! (
+  gen16_bit1 ) & ! ( gen16_bit3 ) ) ) ) ) ) ) ) & ( ( ( ( ( ( gen3_bit5 &
+  gen3_bit7 ) & ( gen2_bit0 & gen2_bit2 ) ) & ( ( gen3_bit0 & gen3_bit1
+  ) & ( gen3_bit2 & gen3_bit4 ) ) ) & ( ( gen31_bit1 & ( gen0_bit7 &
+  gen31_bit0 ) ) & ( ( gen2_bit6 & gen1_bit3 ) & ( gen1_bit5 & gen1_bit6 )
+  ) ) ) & ( ( ( ( ( gen6_bit5 & gen5_bit0 ) & ( gen5_bit1 & gen5_bit2 ) )
+  & ( ( gen8_bit5 & gen7_bit4 ) & ( gen6_bit1 & gen6_bit3 ) ) ) & ( ( (
+  gen5_bit7 & gen4_bit0 ) & ( gen4_bit4 & gen4_bit7 ) ) & ( ( gen5_bit3
+  & gen5_bit4 ) & ( gen5_bit5 & gen5_bit6 ) ) ) ) & ( ( ( ( gen10_bit1 &
+  gen10_bit4 ) & ( gen10_bit5 & gen9_bit1 ) ) & ( ( gen12_bit5 & gen11_bit1
+  ) & ( gen11_bit5 & gen10_bit0 ) ) ) & ( ( ( gen8_bit0 & gen8_bit1 ) & (
+  gen8_bit2 & gen8_bit4 ) ) & ( ( gen9_bit3 & gen9_bit4 ) & ( gen9_bit5
+  & gen9_bit6 ) ) ) ) ) ) & ( ( ( ( ( ( ( gen22_bit0 & gen22_bit1 ) & (
+  gen22_bit2 & gen22_bit3 ) ) & ( ( gen24_bit6 & gen23_bit1 ) & ( gen23_bit6 &
+  gen23_bit7 ) ) ) & ( ( ( gen20_bit6 & gen19_bit1 ) & ( gen19_bit2 & gen19_bit4
+  ) ) & ( ( gen22_bit6 & gen21_bit0 ) & ( gen21_bit1 & gen21_bit2 ) ) ) ) & ( ( (
+  ( gen27_bit1 & gen27_bit3 ) & ( gen27_bit6 & gen27_bit7 ) ) & ( ( gen28_bit1 &
+  gen28_bit2 ) & ( gen28_bit3 & gen28_bit6 ) ) ) & ( ( ( gen26_bit6 & gen24_bit0 )
+  & ( gen24_bit2 & gen24_bit5 ) ) & ( ( gen26_bit0 & gen26_bit1 ) & ( gen26_bit2 &
+  gen26_bit4 ) ) ) ) ) & ( ( ( ( ( gen15_bit6 & gen14_bit0 ) & ( gen14_bit1 &
+  gen14_bit2 ) ) & ( ( gen16_bit7 & gen15_bit2 ) & ( gen15_bit3 & gen15_bit4
+  ) ) ) & ( ( ( gen13_bit3 & gen13_bit5 ) & ( gen12_bit0 & gen12_bit2 ) ) & (
+  ( gen14_bit3 & gen14_bit5 ) & ( gen14_bit6 & gen13_bit2 ) ) ) ) & ( ( ( (
+  gen18_bit3 & gen18_bit4 ) & ( gen18_bit5 & gen18_bit7 ) ) & ( ( gen19_bit7
+  & gen18_bit0 ) & ( gen18_bit1 & gen18_bit2 ) ) ) & ( ( ( gen17_bit5 &
+  gen17_bit6 ) & ( gen17_bit7 & gen16_bit2 ) ) & ( ( gen17_bit1 & gen17_bit2
+  ) & ( gen17_bit3 & gen17_bit4 ) ) ) ) ) ) & ( ( ( ( ( ( ! ( gen7_bit6 ) & !
+  ( gen7_bit7 ) ) & ( ! ( gen6_bit0 ) & ! ( gen6_bit2 ) ) ) & ( ( ! (
+  gen7_bit1 ) & ! ( gen7_bit2 ) ) & ( ! ( gen7_bit3 ) & ! ( gen7_bit5 ) )
+  ) ) & ( ( ( ! ( gen4_bit2 ) & ! ( gen4_bit3 ) ) & ( ! ( gen4_bit5 ) & ! (
+  gen4_bit6 ) ) ) & ( ( ! ( gen6_bit4 ) & ! ( gen6_bit6 ) ) & ( ! (
+  gen6_bit7 ) & ! ( gen4_bit1 ) ) ) ) ) & ( ( ( ( ! ( gen11_bit7 ) & ! (
+  gen10_bit2 ) ) & ( ! ( gen10_bit3 ) & ! ( gen10_bit6 ) ) ) & ( ( ! (
+  gen11_bit2 ) & ! ( gen11_bit3 ) ) & ( ! ( gen11_bit4 ) & ! ( gen11_bit6 ) )
+  ) ) & ( ( ( ! ( gen8_bit3 ) & ! ( gen8_bit6 ) ) & ( ! ( gen8_bit7 ) & ! (
+  gen7_bit0 ) ) ) & ( ( ! ( gen10_bit7 ) & ! ( gen9_bit0 ) ) & ( ! (
+  gen9_bit2 ) & ! ( gen9_bit7 ) ) ) ) ) ) & ( ( ( ( ( ! ( counter3 ) & ! ( counter4 )
+  ) & ( gen31_bit3 & gen31_bit5 ) ) & ( ( ! ( gen0_bit4 ) & ! ( gen0_bit5 ) ) &
+  ( ! ( gen0_bit6 ) & ! ( counter2 ) ) ) ) & ( ( ( gen29_bit3 & gen29_bit5 ) & (
+  gen29_bit6 & gen29_bit7 ) ) & ( ( gen31_bit6 & gen31_bit7 ) & ( gen30_bit4 &
+  gen29_bit0 ) ) ) ) & ( ( ( ( ! ( gen2_bit4 ) & ! ( gen2_bit5 ) ) & ( ! (
+  gen2_bit7 ) & ! ( gen1_bit0 ) ) ) & ( ( ! ( gen3_bit3 ) & ! ( gen3_bit6
+  ) ) & ( ! ( gen2_bit1 ) & ! ( gen2_bit3 ) ) ) ) & ( ( ( ! ( gen0_bit0 ) &
+  ! ( gen0_bit1 ) ) & ( ! ( gen0_bit2 ) & ! ( gen0_bit3 ) ) ) & ( ( ! (
+  gen1_bit1 ) & ! ( gen1_bit2 ) ) & ( ! ( gen1_bit4 ) & ! ( gen1_bit7 ) )
+  ) ) ) ) ) ) ) );
+counter0_inv = ! ( counter0 );
+JTCN295 = ! ( JTCN296 );
+JTCN296 = ( JTCN297 & JTCN325 );
+JTCN297 = ! ( JTCN298 );
+JTCN298 = ( JTCN299 & JTCN323 );
+JTCN299 = ( flag_parity_inv $ JTCN315 );
+flag_parity_inv = ! ( flag_parity );
+flag_parity = ( flag_parity0123456 & flag_xor7 );
+flag_parity0123456 = ( flag_parity012345 $ flag_xor6 );
+flag_parity012345 = ( flag_parity01234 $ flag_xor5 );
+flag_parity01234 = ( flag_parity0123 $ flag_xor4 );
+flag_parity0123 = ( flag_parity012 $ flag_xor3 );
+flag_parity012 = ( ( flag_xor0 $ flag_xor1 ) $ flag_xor2 );
+flag_xor0 = ( flag_in0 $ rotating0 );
+flag_xor1 = ( flag_in1 $ rotating1 );
+flag_xor2 = ( flag_in2 $ rotating2 );
+flag_xor3 = ( flag_in3 $ rotating3 );
+flag_xor4 = ( flag_in4 $ rotating4 );
+flag_xor5 = ( flag_in5 $ rotating5 );
+flag_xor6 = ( flag_in6 $ rotating6 );
+flag_xor7 = ( flag_in7 $ rotating7 );
+JTCN315 = ( JTCN316 $ JTCN317 );
+JTCN316 = ( flag_parity012345 & flag_xor6 );
+JTCN317 = ( ! ( JTCN318 ) $ ( ! ( JTCN321 ) & ! ( JTCN322 ) ) );
+JTCN318 = ( JTCN319 $ JTCN320 );
+JTCN319 = ( flag_parity012 & flag_xor3 );
+JTCN320 = ( ! ( ( ! ( flag_xor0 ) & ! ( flag_xor1 ) ) ) & ! ( ( ! ( ( flag_xor0 &
+  flag_xor1 ) ) & ! ( flag_xor2 ) ) ) );
+JTCN321 = ( flag_parity0123 & flag_xor4 );
+JTCN322 = ( flag_parity01234 & flag_xor5 );
+JTCN323 = ( JTCN324 $ flag_xor7 );
+JTCN324 = ( flag_parity012345 $ ! ( flag_xor6 ) );
+JTCN325 = ! ( ( JTCN315 & JTCN326 ) );
+JTCN326 = ( flag_parity0123456 $ flag_xor7 );
+JTCN327 = ( JTCN328 & JTCN329 );
+JTCN328 = ! ( ( flag_xor2 & JTCN323 ) );
+JTCN329 = ! ( ( flag_xor3 & JTCN326 ) );
+JTCN330 = ( JTCN297 & JTCN331 );
+JTCN331 = ( ! ( ( JTCN332 & ! ( JTCN333 ) ) ) & ! ( JTCN334 ) );
+JTCN332 = ( flag_parity & JTCN317 );
+JTCN333 = ( ! ( ( JTCN322 & JTCN318 ) ) & ( ! ( ( JTCN319 & JTCN320 ) ) & ! ( (
+  JTCN321 & JTCN320 ) ) ) );
+JTCN334 = ( JTCN335 & ( ! ( ( JTCN316 & JTCN317 ) ) & JTCN333 ) );
+JTCN335 = ! ( JTCN332 );
+JTCN336 = ( JTCN337 & JTCN338 );
+JTCN337 = ! ( ( flag_xor4 & JTCN323 ) );
+JTCN338 = ! ( ( flag_xor5 & JTCN326 ) );
+JTCN339 = ! ( JTCN331 );
+JTCN340 = ( ! ( ( JTCN341 & JTCN343 ) ) & ! ( ( JTCN299 & JTCN345 ) ) );
+JTCN341 = ( JTCN335 & ! ( JTCN342 ) );
+JTCN342 = ( flag_parity_inv & ( ! ( JTCN316 ) $ JTCN317 ) );
+JTCN343 = ! ( JTCN344 );
+JTCN344 = ( flag_xor0 & JTCN323 );
+JTCN345 = ( JTCN328 & JTCN346 );
+JTCN346 = ! ( ( flag_xor1 & JTCN326 ) );
+JTCN347 = ( JTCN297 $ JTCN331 );
+JTCN348 = ( JTCN295 & ! ( JTCN349 ) );
+JTCN349 = ( ! ( ( JTCN324 & flag_xor7 ) ) & JTCN350 );
+JTCN350 = ! ( ( flag_xor6 & JTCN323 ) );
+JTCN351 = ( ! ( ( JTCN296 & JTCN349 ) ) & ! ( ( JTCN295 & JTCN336 ) ) );
+JTCN352 = ( JTCN329 & JTCN337 );
+JTCN353 = ! ( JTCN347 );
+JTCN354 = ( ! ( ( flag_parity_inv & JTCN296 ) ) & ! ( ( JTCN295 & JTCN355 ) ) );
+JTCN355 = ( JTCN356 & ! ( JTCN357 ) );
+JTCN356 = ! ( ( flag_xor5 & JTCN323 ) );
+JTCN357 = ( flag_xor6 & JTCN326 );
+JTCN358 = ! ( ( flag_xor1 & JTCN323 ) );
+JTCN359 = ! ( ( flag_xor2 & JTCN326 ) );
+JTCN360 = ( JTCN361 & JTCN362 );
+JTCN361 = ! ( ( flag_xor3 & JTCN323 ) );
+JTCN362 = ! ( ( flag_xor4 & JTCN326 ) );
+JTCN363 = ( JTCN299 & ! ( JTCN364 ) );
+JTCN364 = ( JTCN358 & ! ( ( flag_xor0 & JTCN326 ) ) );
+JTCN365 = ( ! ( ( JTCN341 & JTCN364 ) ) & ! ( ( JTCN299 & JTCN366 ) ) );
+JTCN366 = ( JTCN359 & JTCN361 );
+JTCN367 = ( JTCN356 & JTCN362 );
+counter_012 = ( counter2 & counter_01 );
+counter_01 = ( counter0 & counter1 );
+counter0.D = counter0_inv;
+counter1.D = ( counter0 $ counter1 );
+counter2.D = ( counter2 $ counter_01 );
+counter3.D = ( counter3 $ counter_012 );
+counter4.D = ( counter4 $ ( counter3 & counter_012 ) );
+
+gen31_bit0.D = ! ( ( ! ( ( JTCN347 & JTCN351 ) ) & ! ( ( JTCN353 & ( ! ( (
+  JTCN296 & JTCN327 ) ) & ! ( ( JTCN295 & ( JTCN346 & JTCN343 ) ) ) ) ) ) ) );
+gen31_bit1.D = ! ( ( ! ( ( JTCN347 & JTCN354 ) ) & ( ! ( ( ! ( ( JTCN295 & (
+  JTCN358 & JTCN359 ) ) ) & ( JTCN330 & ! ( ( JTCN325 & JTCN360 ) ) ) ) ) & ! ( (
+  JTCN339 & JTCN363 ) ) ) ) );
+gen31_bit2.D = ! ( ( ! ( ( ! ( ( JTCN295 & JTCN327 ) ) & ( JTCN330 & ! ( (
+  JTCN296 & JTCN336 ) ) ) ) ) & ( ! ( ( JTCN339 & JTCN340 ) ) & ! ( ( JTCN347 &
+  JTCN348 ) ) ) ) );
+gen31_bit3.D = ! ( ( ! ( ( JTCN339 & JTCN365 ) ) & ! ( ( ! ( ( JTCN335 & JTCN347
+  ) ) & ( ! ( ( JTCN353 & ( JTCN295 & JTCN360 ) ) ) & ( ! ( ( JTCN298 & JTCN339 )
+  ) & ! ( ( JTCN296 & JTCN355 ) ) ) ) ) ) ) );
+gen31_bit4.D = ! ( ( ! ( ( JTCN330 & JTCN351 ) ) & ! ( ( ! ( ( JTCN341 & JTCN345
+  ) ) & ( ! ( ( JTCN339 & ( JTCN299 & JTCN352 ) ) ) & ! ( ( JTCN331 & ! ( (
+  JTCN299 & JTCN344 ) ) ) ) ) ) ) ) );
+gen31_bit5.D = ! ( ( ! ( ( JTCN330 & JTCN354 ) ) & ! ( ( ! ( ( JTCN339 & ! ( ( !
+  ( ( JTCN341 & JTCN366 ) ) & ! ( ( JTCN299 & JTCN367 ) ) ) ) ) ) & ! ( ( JTCN331
+  & ! ( JTCN363 ) ) ) ) ) ) );
+gen31_bit6.D = ! ( ( ! ( ( JTCN331 & JTCN340 ) ) & ( ! ( ( JTCN330 & JTCN348 ) )
+  & ! ( ( JTCN339 & ( ! ( ( JTCN299 & ( JTCN338 & JTCN350 ) ) ) & ! ( ( JTCN341 &
+  JTCN352 ) ) ) ) ) ) ) );
+gen31_bit7.D = ( ! ( ( JTCN331 & ! ( JTCN365 ) ) ) & ! ( ( ! ( ( JTCN341 & ! (
+  JTCN367 ) ) ) & ( JTCN334 & ! ( ( JTCN342 & JTCN357 ) ) ) ) ) );
+
+gen30_bit0.D = gen31_bit0;
+gen30_bit1.D = gen31_bit1;
+gen30_bit2.D = gen31_bit2;
+gen30_bit3.D = gen31_bit3;
+gen30_bit4.D = gen31_bit4;
+gen30_bit5.D = gen31_bit5;
+gen30_bit6.D = gen31_bit6;
+gen30_bit7.D = gen31_bit7;
+
+gen29_bit0.D = gen30_bit0;
+gen29_bit1.D = gen30_bit1;
+gen29_bit2.D = gen30_bit2;
+gen29_bit3.D = gen30_bit3;
+gen29_bit4.D = gen30_bit4;
+gen29_bit5.D = gen30_bit5;
+gen29_bit6.D = gen30_bit6;
+gen29_bit7.D = gen30_bit7;
+
+gen28_bit0.D = gen29_bit0;
+gen28_bit1.D = gen29_bit1;
+gen28_bit2.D = gen29_bit2;
+gen28_bit3.D = gen29_bit3;
+gen28_bit4.D = gen29_bit4;
+gen28_bit5.D = gen29_bit5;
+gen28_bit6.D = gen29_bit6;
+gen28_bit7.D = gen29_bit7;
+
+gen27_bit0.D = gen28_bit0;
+gen27_bit1.D = gen28_bit1;
+gen27_bit2.D = gen28_bit2;
+gen27_bit3.D = gen28_bit3;
+gen27_bit4.D = gen28_bit4;
+gen27_bit5.D = gen28_bit5;
+gen27_bit6.D = gen28_bit6;
+gen27_bit7.D = gen28_bit7;
+
+gen26_bit0.D = gen27_bit0;
+gen26_bit1.D = gen27_bit1;
+gen26_bit2.D = gen27_bit2;
+gen26_bit3.D = gen27_bit3;
+gen26_bit4.D = gen27_bit4;
+gen26_bit5.D = gen27_bit5;
+gen26_bit6.D = gen27_bit6;
+gen26_bit7.D = gen27_bit7;
+
+gen25_bit0.D = gen26_bit0;
+gen25_bit1.D = gen26_bit1;
+gen25_bit2.D = gen26_bit2;
+gen25_bit3.D = gen26_bit3;
+gen25_bit4.D = gen26_bit4;
+gen25_bit5.D = gen26_bit5;
+gen25_bit6.D = gen26_bit6;
+gen25_bit7.D = gen26_bit7;
+
+gen24_bit0.D = gen25_bit0;
+gen24_bit1.D = gen25_bit1;
+gen24_bit2.D = gen25_bit2;
+gen24_bit3.D = gen25_bit3;
+gen24_bit4.D = gen25_bit4;
+gen24_bit5.D = gen25_bit5;
+gen24_bit6.D = gen25_bit6;
+gen24_bit7.D = gen25_bit7;
+
+gen23_bit0.D = gen24_bit0;
+gen23_bit1.D = gen24_bit1;
+gen23_bit2.D = gen24_bit2;
+gen23_bit3.D = gen24_bit3;
+gen23_bit4.D = gen24_bit4;
+gen23_bit5.D = gen24_bit5;
+gen23_bit6.D = gen24_bit6;
+gen23_bit7.D = gen24_bit7;
+
+gen22_bit0.D = gen23_bit0;
+gen22_bit1.D = gen23_bit1;
+gen22_bit2.D = gen23_bit2;
+gen22_bit3.D = gen23_bit3;
+gen22_bit4.D = gen23_bit4;
+gen22_bit5.D = gen23_bit5;
+gen22_bit6.D = gen23_bit6;
+gen22_bit7.D = gen23_bit7;
+
+gen21_bit0.D = gen22_bit0;
+gen21_bit1.D = gen22_bit1;
+gen21_bit2.D = gen22_bit2;
+gen21_bit3.D = gen22_bit3;
+gen21_bit4.D = gen22_bit4;
+gen21_bit5.D = gen22_bit5;
+gen21_bit6.D = gen22_bit6;
+gen21_bit7.D = gen22_bit7;
+
+gen20_bit0.D = gen21_bit0;
+gen20_bit1.D = gen21_bit1;
+gen20_bit2.D = gen21_bit2;
+gen20_bit3.D = gen21_bit3;
+gen20_bit4.D = gen21_bit4;
+gen20_bit5.D = gen21_bit5;
+gen20_bit6.D = gen21_bit6;
+gen20_bit7.D = gen21_bit7;
+
+gen19_bit0.D = gen20_bit0;
+gen19_bit1.D = gen20_bit1;
+gen19_bit2.D = gen20_bit2;
+gen19_bit3.D = gen20_bit3;
+gen19_bit4.D = gen20_bit4;
+gen19_bit5.D = gen20_bit5;
+gen19_bit6.D = gen20_bit6;
+gen19_bit7.D = gen20_bit7;
+
+gen18_bit0.D = gen19_bit0;
+gen18_bit1.D = gen19_bit1;
+gen18_bit2.D = gen19_bit2;
+gen18_bit3.D = gen19_bit3;
+gen18_bit4.D = gen19_bit4;
+gen18_bit5.D = gen19_bit5;
+gen18_bit6.D = gen19_bit6;
+gen18_bit7.D = gen19_bit7;
+
+gen17_bit0.D = gen18_bit0;
+gen17_bit1.D = gen18_bit1;
+gen17_bit2.D = gen18_bit2;
+gen17_bit3.D = gen18_bit3;
+gen17_bit4.D = gen18_bit4;
+gen17_bit5.D = gen18_bit5;
+gen17_bit6.D = gen18_bit6;
+gen17_bit7.D = gen18_bit7;
+
+gen16_bit0.D = gen17_bit0;
+gen16_bit1.D = gen17_bit1;
+gen16_bit2.D = gen17_bit2;
+gen16_bit3.D = gen17_bit3;
+gen16_bit4.D = gen17_bit4;
+gen16_bit5.D = gen17_bit5;
+gen16_bit6.D = gen17_bit6;
+gen16_bit7.D = gen17_bit7;
+
+gen15_bit0.D = gen16_bit0;
+gen15_bit1.D = gen16_bit1;
+gen15_bit2.D = gen16_bit2;
+gen15_bit3.D = gen16_bit3;
+gen15_bit4.D = gen16_bit4;
+gen15_bit5.D = gen16_bit5;
+gen15_bit6.D = gen16_bit6;
+gen15_bit7.D = gen16_bit7;
+
+gen14_bit0.D = gen15_bit0;
+gen14_bit1.D = gen15_bit1;
+gen14_bit2.D = gen15_bit2;
+gen14_bit3.D = gen15_bit3;
+gen14_bit4.D = gen15_bit4;
+gen14_bit5.D = gen15_bit5;
+gen14_bit6.D = gen15_bit6;
+gen14_bit7.D = gen15_bit7;
+
+gen13_bit0.D = gen14_bit0;
+gen13_bit1.D = gen14_bit1;
+gen13_bit2.D = gen14_bit2;
+gen13_bit3.D = gen14_bit3;
+gen13_bit4.D = gen14_bit4;
+gen13_bit5.D = gen14_bit5;
+gen13_bit6.D = gen14_bit6;
+gen13_bit7.D = gen14_bit7;
+
+gen12_bit0.D = gen13_bit0;
+gen12_bit1.D = gen13_bit1;
+gen12_bit2.D = gen13_bit2;
+gen12_bit3.D = gen13_bit3;
+gen12_bit4.D = gen13_bit4;
+gen12_bit5.D = gen13_bit5;
+gen12_bit6.D = gen13_bit6;
+gen12_bit7.D = gen13_bit7;
+
+gen11_bit0.D = gen12_bit0;
+gen11_bit1.D = gen12_bit1;
+gen11_bit2.D = gen12_bit2;
+gen11_bit3.D = gen12_bit3;
+gen11_bit4.D = gen12_bit4;
+gen11_bit5.D = gen12_bit5;
+gen11_bit6.D = gen12_bit6;
+gen11_bit7.D = gen12_bit7;
+
+gen10_bit0.D = gen11_bit0;
+gen10_bit1.D = gen11_bit1;
+gen10_bit2.D = gen11_bit2;
+gen10_bit3.D = gen11_bit3;
+gen10_bit4.D = gen11_bit4;
+gen10_bit5.D = gen11_bit5;
+gen10_bit6.D = gen11_bit6;
+gen10_bit7.D = gen11_bit7;
+
+gen9_bit0.D = gen10_bit0;
+gen9_bit1.D = gen10_bit1;
+gen9_bit2.D = gen10_bit2;
+gen9_bit3.D = gen10_bit3;
+gen9_bit4.D = gen10_bit4;
+gen9_bit5.D = gen10_bit5;
+gen9_bit6.D = gen10_bit6;
+gen9_bit7.D = gen10_bit7;
+
+gen8_bit0.D = gen9_bit0;
+gen8_bit1.D = gen9_bit1;
+gen8_bit2.D = gen9_bit2;
+gen8_bit3.D = gen9_bit3;
+gen8_bit4.D = gen9_bit4;
+gen8_bit5.D = gen9_bit5;
+gen8_bit6.D = gen9_bit6;
+gen8_bit7.D = gen9_bit7;
+
+gen7_bit0.D = gen8_bit0;
+gen7_bit1.D = gen8_bit1;
+gen7_bit2.D = gen8_bit2;
+gen7_bit3.D = gen8_bit3;
+gen7_bit4.D = gen8_bit4;
+gen7_bit5.D = gen8_bit5;
+gen7_bit6.D = gen8_bit6;
+gen7_bit7.D = gen8_bit7;
+
+gen6_bit0.D = gen7_bit0;
+gen6_bit1.D = gen7_bit1;
+gen6_bit2.D = gen7_bit2;
+gen6_bit3.D = gen7_bit3;
+gen6_bit4.D = gen7_bit4;
+gen6_bit5.D = gen7_bit5;
+gen6_bit6.D = gen7_bit6;
+gen6_bit7.D = gen7_bit7;
+
+gen5_bit0.D = gen6_bit0;
+gen5_bit1.D = gen6_bit1;
+gen5_bit2.D = gen6_bit2;
+gen5_bit3.D = gen6_bit3;
+gen5_bit4.D = gen6_bit4;
+gen5_bit5.D = gen6_bit5;
+gen5_bit6.D = gen6_bit6;
+gen5_bit7.D = gen6_bit7;
+
+gen4_bit0.D = gen5_bit0;
+gen4_bit1.D = gen5_bit1;
+gen4_bit2.D = gen5_bit2;
+gen4_bit3.D = gen5_bit3;
+gen4_bit4.D = gen5_bit4;
+gen4_bit5.D = gen5_bit5;
+gen4_bit6.D = gen5_bit6;
+gen4_bit7.D = gen5_bit7;
+
+gen3_bit0.D = gen4_bit0;
+gen3_bit1.D = gen4_bit1;
+gen3_bit2.D = gen4_bit2;
+gen3_bit3.D = gen4_bit3;
+gen3_bit4.D = gen4_bit4;
+gen3_bit5.D = gen4_bit5;
+gen3_bit6.D = gen4_bit6;
+gen3_bit7.D = gen4_bit7;
+
+gen2_bit0.D = gen3_bit0;
+gen2_bit1.D = gen3_bit1;
+gen2_bit2.D = gen3_bit2;
+gen2_bit3.D = gen3_bit3;
+gen2_bit4.D = gen3_bit4;
+gen2_bit5.D = gen3_bit5;
+gen2_bit6.D = gen3_bit6;
+gen2_bit7.D = gen3_bit7;
+
+gen1_bit0.D = gen2_bit0;
+gen1_bit1.D = gen2_bit1;
+gen1_bit2.D = gen2_bit2;
+gen1_bit3.D = gen2_bit3;
+gen1_bit4.D = gen2_bit4;
+gen1_bit5.D = gen2_bit5;
+gen1_bit6.D = gen2_bit6;
+gen1_bit7.D = gen2_bit7;
+
+gen0_bit0.D = gen1_bit0;
+gen0_bit1.D = gen1_bit1;
+gen0_bit2.D = gen1_bit2;
+gen0_bit3.D = gen1_bit3;
+gen0_bit4.D = gen1_bit4;
+gen0_bit5.D = gen1_bit5;
+gen0_bit6.D = gen1_bit6;
+gen0_bit7.D = gen1_bit7;
+
+
+rotating0.AP = reset;
+rotating0.AR = 'b'0;
+rotating0.D = rotating15;
+rotating1.AP = reset;
+rotating1.AR = 'b'0;
+rotating1.D = rotating0;
+rotating2.AP = reset;
+rotating2.AR = 'b'0;
+rotating2.D = rotating1;
+rotating3.D = ( rotating2 $ rotating15 );
+rotating4.AP = reset;
+rotating4.AR = 'b'0;
+rotating4.D = ( rotating3 $ rotating15 );
+rotating5.AP = reset;
+rotating5.AR = 'b'0;
+rotating5.D = ( rotating4 $ rotating15 );
+rotating6.D = rotating5;
+rotating7.D = rotating6;
+rotating8.AP = reset;
+rotating8.AR = 'b'0;
+rotating8.D = rotating7;
+rotating9.AP = reset;
+rotating9.AR = 'b'0;
+rotating9.D = rotating8;
+rotating10.D = rotating9;
+rotating11.D = rotating10;
+rotating12.AP = reset;
+rotating12.AR = 'b'0;
+rotating12.D = rotating11;
+rotating13.D = rotating12;
+rotating14.D = rotating13;
+rotating15.D = rotating14;
